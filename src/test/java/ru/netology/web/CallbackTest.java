@@ -44,8 +44,7 @@ public class CallbackTest {
       driver.findElement(By.cssSelector("button.button")).click();
       var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
       assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
-      //загрузить страницу
-        //поиск элементов
-        //взаимодействие с элементами
+      
     }
 }
+

@@ -81,6 +81,8 @@ public class AppOrderNegativeTest {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иваныч-Ивановичев Иван");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+78005553535");
         driver.findElement(By.cssSelector("button.button")).click();
-        AssertTrue(driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid")).isDisplayed());
+        var actualTextElement = driver.findElement(By.cssSelector("[data-test-id=agreement]"));
+        var actualText = actualTextElement.getText().trim();
+        assertTrue(driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid .input__sub")).isDisplayed());
     }
 }
